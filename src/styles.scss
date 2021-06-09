@@ -13,7 +13,7 @@ a {
 }
 
 .heading-2 {
-  font-weight: 500;
+  font-weight: bold;
   font-size: 20px;
   line-height: 23px;
 }
@@ -43,4 +43,12 @@ a {
   font-weight: 900;
   font-size: 23px;
   line-height: 27px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.no-bold {
+  font-weight: normal;
 }

@@ -1,0 +1,22 @@
+@import "./variables.scss";
+@import "./styles.scss";
+
+.sidenav {
+  padding: 0 25px;
+  background-color: $secondary-color;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  .title {
+    margin-bottom: 36px;
+  }
+  .item {
+    margin-bottom: 30px;
+    &.split {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+  }
+}

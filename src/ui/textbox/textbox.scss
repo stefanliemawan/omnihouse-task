@@ -12,7 +12,7 @@
   .title {
     display: flex;
     color: $secondary-purple;
-    margin-bottom: 8px;
+    margin-bottom: 8px !important;
   }
   .textbox {
     background-color: $secondary-black;

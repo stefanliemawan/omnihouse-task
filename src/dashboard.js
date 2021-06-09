@@ -1,23 +1,20 @@
-import Card from "./card/card";
+import Card from "./component/card/card";
 import "./dashboard.scss";
-import Sidenav from "./sidenav/sidenav";
+import Sidenav from "./component/sidenav/sidenav";
+import Button from "./ui/button/button";
 
 function Dashboard() {
   return (
-    <div className="dashboard-container">
+    <div className="dashboard">
       <div className="header">
-        <a href="/" className="button">
-          Login
-        </a>
-        <a href="/" className="button transparent">
-          Sign Up
-        </a>
+        <Button styles="purple" label="Login" />
+        <Button styles="transparent" label="Sign Up" />
       </div>
-      <div className="dashboard">
-        <div className="sidenav">
+      <div className="body">
+        <div className="side">
           <Sidenav />
         </div>
-        <div className="card">
+        <div className="main">
           <Card />
         </div>
       </div>

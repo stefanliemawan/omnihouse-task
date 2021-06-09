@@ -1,7 +1,7 @@
 @import "./variables.scss";
 @import "./styles.scss";
 
-.dropdown-container {
+.dropdown {
   background: $primary-black;
   border: 1px solid $secondary-black;
   box-sizing: border-box;
@@ -9,14 +9,16 @@
   padding: 14px;
   display: flex;
   flex-flow: column wrap;
+  min-width: 156px;
   .title {
     display: flex;
     color: $secondary-purple;
-    margin-bottom: 8px;
+    margin-bottom: 8px !important;
   }
-  .dropdown {
+  .select {
     background-color: $secondary-black;
     border: none;
     color: $primary-white;
+    font-weight: 500;
   }
 }
