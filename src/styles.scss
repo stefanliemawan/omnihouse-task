@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+a {
+  text-decoration: none;
+  color: $primary-white;
+}
+
+.heading-1 {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+  color: $primary-white;
+}
+
+.heading-2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.heading-3 {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.paragraph-1 {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.subtitle-1 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.subtitle-2 {
+  font-size: 14px;
+  line-height: 10px;
+}
+
+.price-tag {
+  font-weight: 900;
+  font-size: 23px;
+  line-height: 27px;
+}

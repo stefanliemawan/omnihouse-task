@@ -1,0 +1,22 @@
+@import "./variables.scss";
+@import "./styles.scss";
+
+.textbox-container {
+  background: $primary-black;
+  border: 1px solid $secondary-black;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 14px;
+  display: flex;
+  flex-flow: column wrap;
+  .title {
+    display: flex;
+    color: $secondary-purple;
+    margin-bottom: 8px;
+  }
+  .textbox {
+    background-color: $secondary-black;
+    border: none;
+    color: $primary-gray;
+  }
+}
