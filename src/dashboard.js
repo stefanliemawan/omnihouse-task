@@ -6,13 +6,13 @@ import Button from "./ui/button/button";
 function Dashboard() {
   return (
     <div className="dashboard">
-      <div className="header">
-        <Button styles="purple" label="Login" />
-        <Button styles="transparent" label="Sign Up" />
+      <div className="side">
+        <Sidenav />
       </div>
       <div className="body">
-        <div className="side">
-          <Sidenav />
+        <div className="header">
+          <Button styles="purple" label="Login" />
+          <Button styles="transparent" label="Sign up" />
         </div>
         <div className="main">
           <Card />

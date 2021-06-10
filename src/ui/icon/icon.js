@@ -39,7 +39,7 @@ function Icon(props) {
   return (
     <div className="icon">
       {icon}
-      <label className="subtitle-1">{props.label}</label>
+      <label className="label paragraph-1">{props.label}</label>
     </div>
   );
 }

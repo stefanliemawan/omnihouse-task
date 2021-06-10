@@ -5,18 +5,18 @@
   background: $primary-black;
   border: 1px solid $secondary-black;
   box-sizing: border-box;
-  border-radius: 15px;
-  padding: 14px;
+  border-radius: 10px;
+  padding: 10px;
   display: flex;
   flex-flow: column wrap;
-  min-width: 156px;
+  min-width: 125px;
   .title {
     display: flex;
     color: $secondary-purple;
     margin-bottom: 8px !important;
   }
   .select {
-    background-color: $secondary-black;
+    background-color: $primary-black;
     border: none;
     color: $primary-white;
     font-weight: 500;

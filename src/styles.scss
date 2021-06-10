@@ -5,44 +5,52 @@ a {
   color: $primary-white;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  &-track {
+    background: $primary-black;
+  }
+  &-thumb {
+    background: $secondary-gray;
+    border-radius: 15px;
+    &:hover {
+      background: $primary-gray;
+    }
+  }
+}
+
 .heading-1 {
   font-weight: bold;
-  font-size: 25px;
-  line-height: 29px;
-  color: $primary-white;
+  font-size: 21px;
+  line-height: 23px;
 }
 
 .heading-2 {
   font-weight: bold;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 16px;
+  line-height: 17px;
 }
 
 .heading-3 {
   font-weight: bold;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 12px;
+  line-height: 13px;
 }
 
 .paragraph-1 {
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 12px;
+  line-height: 13px;
 }
 
 .subtitle-1 {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.subtitle-2 {
-  font-size: 14px;
+  font-size: 10px;
   line-height: 10px;
 }
 
 .price-tag {
-  font-weight: 900;
-  font-size: 23px;
-  line-height: 27px;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 21px;
 }
 
 .bold {
