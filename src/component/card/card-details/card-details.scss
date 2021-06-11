@@ -1,0 +1,74 @@
+@import "./variables.scss";
+
+.card-details {
+  display: flex;
+  flex-flow: column nowrap;
+  .bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin-bottom: 17px;
+    .upload {
+      margin-right: 12px;
+    }
+  }
+  .img {
+    display: flex;
+    align-self: center;
+    position: relative;
+    img {
+      max-width: 100%;
+    }
+    .logo {
+      position: absolute;
+      margin: 12px;
+    }
+    .arrow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+  }
+  .ellipsis {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .details {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    .count {
+      display: flex;
+      flex-flow: row nowrap;
+      .separator {
+        margin-right: 10px;
+      }
+    }
+  }
+  .line {
+    border: 1px solid $primary-brown;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .maps {
+    border-radius: 15px;
+    margin-bottom: 25px;
+  }
+}

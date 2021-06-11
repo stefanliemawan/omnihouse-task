@@ -1,86 +1,46 @@
 import "./card.scss";
-import bedroomImage from "../../assets/images/bedroom.png";
-import Icon from "../../ui/icon/icon";
+import React from "react";
+import CardList from "./card-list/card-list";
+import CardDetails from "./card-details/card-details";
 
-function Card() {
-  const mockBedroom = [
-    {
-      title: "3 Bedroom flat in Hackney Bridge",
-      price: "£1,420 pcm",
-      bedroomCount: 3,
-      livingroomCount: 1,
-      location: "South Kensington (0.1 mile)",
-      moveInDate: "Move-in from 20/04/21",
-    },
-    {
-      title: "3 Bedroom flat in Hackney Bridge",
-      price: "£1,420 pcm",
-      bedroomCount: 3,
-      livingroomCount: 1,
-      location: "South Kensington (0.1 mile)",
-      moveInDate: "Move-in from 20/04/21",
-    },
-    {
-      title: "3 Bedroom flat in Hackney Bridge",
-      price: "£1,420 pcm",
-      bedroomCount: 3,
-      livingroomCount: 1,
-      location: "South Kensington (0.1 mile)",
-      moveInDate: "Move-in from 20/04/21",
-    },
-    {
-      title: "3 Bedroom flat in Hackney Bridge",
-      price: "£1,420 pcm",
-      bedroomCount: 3,
-      livingroomCount: 1,
-      location: "South Kensington (0.1 mile)",
-      moveInDate: "Move-in from 20/04/21",
-    },
-    {
-      title: "3 Bedroom flat in Hackney Bridge",
-      price: "£1,420 pcm",
-      bedroomCount: 3,
-      livingroomCount: 1,
-      location: "South Kensington (0.1 mile)",
-      moveInDate: "Move-in from 20/04/21",
-    },
-    {
-      title: "3 Bedroom flat in Hackney Bridge",
-      price: "£1,420 pcm",
-      bedroomCount: 3,
-      livingroomCount: 1,
-      location: "South Kensington (0.1 mile)",
-      moveInDate: "Move-in from 20/04/21",
-    },
-  ];
+class Card extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      list: false,
+    };
+    this.toggleCard = this.toggleCard.bind(this);
+  }
 
-  // add scrollbar
-  return (
-    <div className="card">
-      <label className="heading-1 no-bold">15 Search results</label>
-      {mockBedroom.map((value, index) => (
-        <div key={index} className="item">
-          <div className="img">
-            <img src={bedroomImage} alt="Bedroom"></img>
-          </div>
-          <div className="info">
-            <label className="heading-2">{value.title}</label>
-            <label className="price-tag">{value.price}</label>
-            <div className="count">
-              <Icon icon="bed" label={value.bedroomCount} />
-              <span className="separator"></span>
-              <Icon icon="couch" label={value.livingroomCount} />
-            </div>
-            <Icon icon="underground" label={value.location} />
-            <label className="subtitle-1">{value.moveInDate}</label>
-            <div className="envelope">
-              <Icon icon="envelope" />
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+  toggleCard() {
+    this.setState({
+      list: !this.state.list,
+    });
+  }
+
+  renderCardList() {
+    return (
+      <div className="card">
+        <CardList toggleCard={this.toggleCard} />
+      </div>
+    );
+  }
+
+  renderCardDetails() {
+    return (
+      <div className="card">
+        <CardDetails toggleCard={this.toggleCard} />
+      </div>
+    );
+  }
+
+  render() {
+    if (this.state.list) {
+      return this.renderCardList();
+    } else {
+      return this.renderCardDetails();
+    }
+  }
 }
 
 export default Card;

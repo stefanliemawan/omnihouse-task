@@ -10,7 +10,7 @@ function Dashboard() {
         <Sidenav />
       </div>
       <div className="body">
-        <div className="header">
+        <div className="navbar">
           <Button styles="purple" label="Login" />
           <Button styles="transparent" label="Sign up" />
         </div>
