@@ -2,6 +2,7 @@ import bedroomImage from "../../../assets/images/bedroom-small.png";
 import Icon from "../../../ui/icon/icon";
 import "./card-list.scss";
 import { DesktopTablet, Mobile } from "../../../responsive";
+import { useMediaQuery } from "react-responsive";
 
 function CardList(props) {
   const mockBedroom = [
@@ -54,8 +55,14 @@ function CardList(props) {
       moveInDate: "Move-in from 20/04/21",
     },
   ];
+  var containerClass;
+  if (useMediaQuery({ minWidth: 992 })) {
+    containerClass = "card-list desktop";
+  } else {
+    containerClass = "card-list mobile";
+  }
   return (
-    <div className="card-list">
+    <div className={containerClass}>
       <DesktopTablet>
         <label className="heading-1 no-bold">15 Search results</label>
         {mockBedroom.map((value, index) => (

@@ -1,6 +1,11 @@
 @import "./variables.scss";
 
 .card-list {
+  height: 100%;
+  &.desktop {
+    overflow-y: scroll;
+    padding-right: 15px;
+  }
   .item {
     display: flex;
     margin-top: 30px;
@@ -10,9 +15,13 @@
     cursor: pointer;
     &.desktop {
       flex-flow: row nowrap;
+      margin-top: 30px;
+      padding: 20px;
     }
     &.mobile {
       flex-flow: column nowrap;
+      margin-top: 15px;
+      padding: 10px;
     }
     .img {
       flex: 20%;

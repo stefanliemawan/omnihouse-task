@@ -33,8 +33,8 @@ a {
 
 .heading-3 {
   font-weight: bold;
-  font-size: 12px;
-  line-height: 13px;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .paragraph-1 {
@@ -67,4 +67,34 @@ a {
 
 .icon-separator {
   margin-left: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .heading-1 {
+    font-weight: bold;
+    font-size: 21px;
+  }
+
+  .heading-2 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .heading-3 {
+    font-weight: bold;
+    font-size: 11px;
+  }
+
+  .paragraph-1 {
+    font-size: 14px;
+  }
+
+  .subtitle-1 {
+    font-size: 10px;
+  }
+
+  .price-tag {
+    font-weight: 700;
+    font-size: 19px;
+  }
 }
