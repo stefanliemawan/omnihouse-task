@@ -2,6 +2,7 @@ import "./card-details.scss";
 import Icon from "../../../ui/icon/icon";
 import bedroomImage from "../../../assets/images/bedroom-large.png";
 import mapsImage from "../../../assets/images/google-maps.png";
+import { DesktopTablet, Mobile } from "../../../responsive";
 
 function CardDetails(props) {
   const mockDetail = {
@@ -22,9 +23,16 @@ function CardDetails(props) {
   return (
     <div className="card-details">
       <div className="bar">
-        <Icon icon="upload" class="upload" />
-        <span className="icon-separator"></span>
-        <Icon icon="cross" onClick={props.toggleCard} />
+        <DesktopTablet>
+          <Icon icon="upload" class="upload" />
+          <span className="icon-separator"></span>
+          <Icon icon="cross" onClick={props.toggleCard} />
+        </DesktopTablet>
+        <Mobile>
+          <Icon icon="upload" class="upload" size="small" />
+          <span className="icon-separator"></span>
+          <Icon icon="cross" onClick={props.toggleCard} size="small" />
+        </Mobile>
       </div>
       <div className="img">
         <div className="logo">
@@ -37,30 +45,54 @@ function CardDetails(props) {
         <img src={bedroomImage} alt="Bedroom"></img>
       </div>
       <div className="ellipsis">
-        <Icon icon="ellipsisPurple" />
+        <Icon icon="ellipsisPurple" size="tiny" />
         <span className="icon-separator"></span>
-        <Icon icon="ellipsisBrown" />
+        <Icon icon="ellipsisBrown" size="tiny" />
         <span className="icon-separator"></span>
-        <Icon icon="ellipsisBrown" />
+        <Icon icon="ellipsisBrown" size="tiny" />
         <span className="icon-separator"></span>
-        <Icon icon="ellipsisBrown" />
+        <Icon icon="ellipsisBrown" size="tiny" />
       </div>
-      <div className="title">
-        <label className="heading-1">{mockDetail.title}</label>
-        <Icon icon="envelope" />
-      </div>
-      <label className="price-tag">{mockDetail.price}</label>
-      <div className="details">
-        <div className="count">
-          <Icon icon="bed" label={mockDetail.bedroomCount} />
-          <span className="separator"></span>
-          <Icon icon="couch" label={mockDetail.livingroomCount} />
-          <span className="separator"></span>
-          <Icon icon="toilet" label={mockDetail.toiletCount} />
+      <div className="info">
+        <div className="title">
+          <label className="heading-1">{mockDetail.title}</label>
+          <Icon icon="envelope" />
         </div>
-        <Icon icon="underground" label={mockDetail.location} />
-        <label className="paragraph-1">{mockDetail.furnished}</label>
-        <label className="paragraph-1">{mockDetail.moveInDate}</label>
+        <label className="price-tag">{mockDetail.price}</label>
+        <DesktopTablet>
+          <div className="details desktop">
+            <div className="count">
+              <Icon icon="bed" label={mockDetail.bedroomCount} />
+              <span className="separator"></span>
+              <Icon icon="couch" label={mockDetail.livingroomCount} />
+              <span className="separator"></span>
+              <Icon icon="toilet" label={mockDetail.toiletCount} />
+            </div>
+            <Icon icon="underground" label={mockDetail.location} />
+            <label className="subtitle-1">{mockDetail.furnished}</label>
+            <label className="subtitle-1">{mockDetail.moveInDate}</label>
+          </div>
+        </DesktopTablet>
+        <Mobile>
+          <div className="details mobile">
+            <div className="count margin-bottom">
+              <Icon icon="bed" label={mockDetail.bedroomCount} />
+              <span className="separator"></span>
+              <Icon icon="couch" label={mockDetail.livingroomCount} />
+              <span className="separator"></span>
+              <Icon icon="toilet" label={mockDetail.toiletCount} />
+            </div>
+            <div className="margin-bottom">
+              <Icon icon="underground" label={mockDetail.location} />
+            </div>
+            <label className="subtitle-1 margin-bottom">
+              {mockDetail.furnished}
+            </label>
+            <label className="subtitle-1 margin-bottom">
+              {mockDetail.moveInDate}
+            </label>
+          </div>
+        </Mobile>
       </div>
       <span className="line"></span>
       <img className="maps" src={mapsImage} alt="Google Maps" />

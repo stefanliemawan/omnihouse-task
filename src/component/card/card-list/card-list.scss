@@ -3,12 +3,17 @@
 .card-list {
   .item {
     display: flex;
-    flex-flow: row nowrap;
     margin-top: 30px;
     padding: 20px;
     background-color: $tertiary-color;
     border-radius: 15px;
     cursor: pointer;
+    &.desktop {
+      flex-flow: row nowrap;
+    }
+    &.mobile {
+      flex-flow: column nowrap;
+    }
     .img {
       flex: 20%;
       position: relative;
@@ -22,10 +27,18 @@
     }
     .info {
       flex: auto;
-      margin: 10px 0px 10px 40px;
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
+      &.desktop {
+        margin: 10px 0px 10px 40px;
+      }
+      &.mobile {
+        margin: 10px 0px;
+        .margin-bottom {
+          margin-bottom: 10px;
+        }
+      }
       .count {
         display: flex;
         flex-flow: row nowrap;

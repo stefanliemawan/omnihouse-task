@@ -16,9 +16,6 @@
     display: flex;
     align-self: center;
     position: relative;
-    img {
-      max-width: 100%;
-    }
     .logo {
       position: absolute;
       margin: 12px;
@@ -39,26 +36,41 @@
     align-items: center;
     margin-top: 25px;
   }
-  .title {
+  .info {
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-  .details {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    .count {
+    flex-flow: column nowrap;
+    .title {
       display: flex;
       flex-flow: row nowrap;
-      .separator {
-        margin-right: 10px;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    .details {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      &.desktop {
+        flex-flow: row nowrap;
+        align-items: center;
+      }
+      &.mobile {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+      }
+      .count {
+        display: flex;
+        flex-flow: row nowrap;
+        .separator {
+          margin-right: 10px;
+        }
+      }
+      .margin-bottom {
+        margin-bottom: 20px;
       }
     }
   }

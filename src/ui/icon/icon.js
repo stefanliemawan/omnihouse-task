@@ -1,6 +1,6 @@
 import "./icon.scss";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCouch, faEnvelope, faBed } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import bedLogo from "../../assets/logo/bed.png";
 import couchLogo from "../../assets/logo/couch.png";
 import undergroundLogo from "../../assets/logo/underground.png";
@@ -15,31 +15,68 @@ import ellipsisPurpleLogo from "../../assets/logo/ellipsis-purple.png";
 import ellipsisBrownLogo from "../../assets/logo/ellipsis-brown.png";
 
 function Icon(props) {
-  // const bed = <FontAwesomeIcon icon={faBed} />;
-  // const couch = <FontAwesomeIcon icon={faCouch} />;
-  // const envelope = <FontAwesomeIcon icon={faEnvelope} />;
+  var icon;
+  var iconClass = "icon-img";
+  var labelClass = "label subtitle-1 " + props.class;
 
-  const bed = <img src={bedLogo} alt="Bed Logo" />;
-  const couch = <img src={couchLogo} alt="Couch Logo" />;
-  const underground = <img src={undergroundLogo} alt="Underground Logo" />;
-  const envelope = <img src={envelopeLogo} alt="Envelope Logo" />;
-  const img = <img src={imgLogo} alt="Img Logo" />;
-  const upload = <img src={uploadLogo} alt="Upload Logo" />;
-  const cross = <img src={crossLogo} alt="Cross Logo" />;
-  const toilet = <img src={toiletLogo} alt="Toilet Logo" />;
-  const arrowLeft = <img src={arrowLeftLogo} alt="Arrow Left Logo" />;
-  const arrowRight = <img src={arrowRightLogo} alt="Arrow Right Logo" />;
+  switch (props.labelColor) {
+    default:
+      labelClass = labelClass + "";
+      break;
+    case "black":
+      labelClass = labelClass + " black";
+      break;
+  }
+
+  if (props.size) {
+    iconClass = iconClass + " " + props.size;
+  }
+
+  const bars = (
+    <FontAwesomeIcon icon={faBars} className={iconClass} size="2x" />
+  );
+
+  const bed = <img src={bedLogo} className={iconClass} alt="Bed Logo" />;
+  const couch = <img src={couchLogo} className={iconClass} alt="Couch Logo" />;
+  const underground = (
+    <img src={undergroundLogo} className={iconClass} alt="Underground Logo" />
+  );
+  const envelope = (
+    <img src={envelopeLogo} className={iconClass} alt="Envelope Logo" />
+  );
+  const img = <img src={imgLogo} className={iconClass} alt="Img Logo" />;
+  const upload = (
+    <img src={uploadLogo} className={iconClass} alt="Upload Logo" />
+  );
+  const cross = <img src={crossLogo} className={iconClass} alt="Cross Logo" />;
+  const toilet = (
+    <img src={toiletLogo} className={iconClass} alt="Toilet Logo" />
+  );
+  const arrowLeft = (
+    <img src={arrowLeftLogo} className={iconClass} alt="Arrow Left Logo" />
+  );
+  const arrowRight = (
+    <img src={arrowRightLogo} className={iconClass} alt="Arrow Right Logo" />
+  );
   const ellipsisPurple = (
-    <img src={ellipsisPurpleLogo} alt="Ellipsis Purple Logo" />
+    <img
+      src={ellipsisPurpleLogo}
+      className={iconClass}
+      alt="Ellipsis Purple Logo"
+    />
   );
   const ellipsisBrown = (
-    <img src={ellipsisBrownLogo} alt="Ellipsis Brown Logo" />
+    <img
+      src={ellipsisBrownLogo}
+      className={iconClass}
+      alt="Ellipsis Brown Logo"
+    />
   );
 
-  var icon;
-  var labelClass;
-
   switch (props.icon) {
+    default:
+      icon = envelope;
+      break;
     case "bed":
       icon = bed;
       break;
@@ -76,18 +113,11 @@ function Icon(props) {
     case "ellipsisBrown":
       icon = ellipsisBrown;
       break;
-    default:
-      icon = envelope;
+    case "bars":
+      icon = bars;
       break;
   }
 
-  switch (props.labelColor) {
-    default:
-      labelClass = "label paragraph-1 " + props.class;
-      break;
-    case "black":
-      labelClass = "label paragraph-1 black " + props.class;
-  }
   if (props.label) {
     return (
       <div className="icon" onClick={props.onClick}>

@@ -1,20 +1,19 @@
 @import "./variables.scss";
 @import "./styles.scss";
 
-.textbox-container {
+.textbox {
   background: $primary-black;
   border: 1px solid $secondary-black;
-  box-sizing: border-box;
   border-radius: 15px;
   padding: 14px;
   display: flex;
   flex-flow: column wrap;
-  .title {
+  &-title {
     display: flex;
     color: $secondary-purple;
     margin-bottom: 8px !important;
   }
-  .textbox {
+  &-box {
     background-color: $primary-black;
     border: none;
   }

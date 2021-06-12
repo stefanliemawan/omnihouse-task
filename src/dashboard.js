@@ -2,6 +2,7 @@ import Card from "./component/card/card";
 import "./dashboard.scss";
 import Sidenav from "./component/sidenav/sidenav";
 import Button from "./ui/button/button";
+import { DesktopTablet, Mobile } from "./responsive";
 
 function Dashboard() {
   return (
@@ -11,8 +12,14 @@ function Dashboard() {
       </div>
       <div className="body">
         <div className="navbar">
-          <Button styles="purple" label="Login" />
-          <Button styles="transparent" label="Sign up" />
+          <DesktopTablet>
+            <Button styles="purple" label="Login" />
+            <Button styles="transparent" label="Sign up" />
+          </DesktopTablet>
+          <Mobile>
+            <Button styles="purple" label="Login" size="small" />
+            <Button styles="transparent" label="Sign up" size="small" />
+          </Mobile>
         </div>
         <div className="main">
           <Card />
